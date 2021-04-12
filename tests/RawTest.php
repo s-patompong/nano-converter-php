@@ -3,7 +3,6 @@
 
 namespace SPatompong\NanoConverter\Tests;
 
-
 use PHPUnit\Framework\TestCase;
 use SPatompong\NanoConverter\Raw;
 
