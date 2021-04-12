@@ -1,40 +1,44 @@
-# :package_description
+# Nano converter
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/vendor_slug/package_slug.svg?style=flat-square)](https://packagist.org/packages/vendor_slug/package_slug)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/vendor_slug/package_slug/run-tests?label=tests)](https://github.com/vendor_slug/package_slug/actions?query=workflow%3ATests+branch%3Amaster)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/vendor_slug/package_slug/Check%20&%20fix%20styling?label=code%20style)](https://github.com/vendor_slug/package_slug/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/vendor_slug/package_slug.svg?style=flat-square)](https://packagist.org/packages/vendor_slug/package_slug)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/s-patompong/nano-converter-php.svg?style=flat-square)](https://packagist.org/packages/s-patompong/nano-converter-php)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/s-patompong/nano-converter-php/run-tests?label=tests)](https://github.com/s-patompong/nano-converter-php/actions?query=workflow%3ATests+branch%3Amaster)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/s-patompong/nano-converter-php/Check%20&%20fix%20styling?label=code%20style)](https://github.com/s-patompong/nano-converter-php/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amaster)
+[![Total Downloads](https://img.shields.io/packagist/dt/s-patompong/nano-converter-php.svg?style=flat-square)](https://packagist.org/packages/s-patompong/nano-converter-php)
 
-[](delete) 1) manually replace `:author_name, :author_username, auhor@domain.com, :vendor_name, vendor_slug, Vendor Name, :package_name, package_slug, skeleton, Skeleton, :package_description` with their correct values
-[](delete) in `CHANGELOG.md LICENSE.md README.md composer.json SkeletonClass.php ExampleTest.php FUNDING.yml config.yml SECURITY.md`
-[](delete) and delete `configure-skeleton.sh`
+Convert between Nano currency unit.
 
-[](delete) 2) You can also run `./configure-skeleton.sh` to do this automatically.
+## Support me
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/package-skeleton-php.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/package-skeleton-php)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+You can support me by send NANO to `nano_1pondb4akejp534dirzgbrkdkqdibksn3owbjwosgw7mkm83oiyat8dk8cdw`
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require vendor_slug/package_slug
+composer require s-patompong/nano-converter-php
 ```
 
 ## Usage
 
+Convert NANO to Raw.
 ```php
-$skeleton = new VendorName\Skeleton();
-echo $skeleton->echoPhrase('Hello, VendorName!');
+$nano = new \SPatompong\NanoConverter\NANO("45.225513");
+echo $nano->toRaw();
+
+// Output: "45225513000000000000000000000000"
 ```
+
+Convert Raw to NANO.
+
+```php
+$raw = new \SPatompong\NanoConverter\Raw("7126405971523");
+echo $raw->toNANO();
+
+// Output: "0.000000000000000007126405971523"
+```
+
+It's important to note that the returned response is the object of BigDecimal class.
 
 ## Testing
 
@@ -52,12 +56,11 @@ Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
 ## Security Vulnerabilities
 
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+Please email me at `p.pangpond@gmail.com` if you found vulnerabilities.
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
-- [All Contributors](../../contributors)
+- [Patompong Savaengsuk](https://github.com/s-patompong)
 
 ## License
 
