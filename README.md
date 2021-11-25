@@ -9,7 +9,7 @@ Convert between Nano currency unit.
 
 ## Support me
 
-You can support me by send NANO to `nano_1pondb4akejp534dirzgbrkdkqdibksn3owbjwosgw7mkm83oiyat8dk8cdw`
+You can support me by send NANO to `nano_3h9jnfh5j7j7bpyexb8uhze9fb35sy6gu6a8mhpzpj4ob1qnejfzkropmbw7`
 
 ## Installation
 
